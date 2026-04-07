@@ -9,7 +9,7 @@ Este portafolio consiste en una aplicación de clima desarrollada para el Módul
 - Estructura de archivos organizada.
 
 ## 🚀 Funcionalidades del Portafolio
-- **Dashboard de Clima:** Visualización de condiciones meteorológicas actuales.
+- **Dashboard de Clima:** Visualización de condiciones meteorológicas.
 - **Vistas dinámicas:** Navegación fluida entre la página principal y el detalle por ciudad.
 - **Diseño Responsive:** Adaptado para una visualización óptima en dispositivos  usando **Bootstrap 5**.
 - **Estructura Organizada:** Separación limpia de archivos CSS, JS e imágenes en carpetas de activos.
