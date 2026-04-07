@@ -1,0 +1,33 @@
+body {
+  background-image: url('../img/fondo-cielo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* efecto pro */
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transform: scale(1.05);
+}
+.footer-custom {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
