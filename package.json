@@ -1,0 +1,27 @@
+{
+  "name": "weather-frontend-m2",
+  "version": "1.0.0",
+  "description": "Este portafolio consiste en una aplicación de clima desarrollada para el Módulo 2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pilucasanovavera-gif/weather-frontend-m2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pilucasanovavera-gif/weather-frontend-m2/issues"
+  },
+  "homepage": "https://github.com/pilucasanovavera-gif/weather-frontend-m2#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}

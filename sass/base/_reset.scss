@@ -1,0 +1,14 @@
+body {
+  background-image: url('../img/fondo-cielo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main {
+  background-color: $bg-main; // Usamos la variable
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
