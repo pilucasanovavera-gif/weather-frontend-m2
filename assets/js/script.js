@@ -6,43 +6,53 @@ const datosClima = {
     viento: "20 km/h",
   },
 };
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  // 👉 TODOS los botones llevan al mismo detalle
   const botones = document.querySelectorAll(".ver-detalle");
 
-  botones.forEach((boton) => {
-    boton.addEventListener("click", () => {
-      localStorage.setItem("ciudadSeleccionada", "Puerto Montt");
-      window.location.href = "detalle.html";
+  if (botones.length > 0) {
+    botones.forEach((boton) => {
+      boton.addEventListener("click", () => {
+        const ciudadSeleccionada = boton.dataset.ciudad;
+
+        localStorage.setItem("ciudadSeleccionada", ciudadSeleccionada);
+
+        window.location.href = "detalle.html";
+      });
     });
-  });
+  }
 
-  // 👉 DETALLE
-  const ciudad = localStorage.getItem("ciudadSeleccionada");
+  const ciudadKey = localStorage.getItem("ciudadSeleccionada");
+  const contenedorCiudad = document.getElementById("ciudad");
 
-  if (ciudad && document.getElementById("ciudad")) {
-    const data = datosClima["Puerto Montt"];
+  if (ciudadKey && contenedorCiudad) {
+    const data = datosClima[ciudadKey];
 
-    document.getElementById("ciudad").textContent = "Puerto Montt";
-    document.getElementById("temp").textContent = data.temp;
-    document.getElementById("estado").textContent = data.estado;
-    document.getElementById("humedad").textContent =
-      "💧 Humedad: " + data.humedad;
-    document.getElementById("viento").textContent =
-      "🌬️ Viento: " + data.viento;
+    if (data) {
+      contenedorCiudad.textContent = ciudadKey;
+      document.getElementById("temp").textContent = data.temp;
+      document.getElementById("estado").textContent = data.estado;
+      document.getElementById("humedad").textContent =
+        "💧 Humedad: " + data.humedad;
+      document.getElementById("viento").textContent =
+        "🌬️ Viento: " + data.viento;
+    } else {
+      contenedorCiudad.textContent = "Ciudad no encontrada";
+    }
 
     const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
     const lista = document.getElementById("lista");
 
     if (lista) {
       lista.innerHTML = "";
-
       dias.forEach((dia) => {
         const li = document.createElement("li");
-        li.className = "list-group-item";
-        li.textContent = `${dia} - ${Math.floor(Math.random() * 10 + 10)}°C`;
+
+        li.className =
+          "list-group-item d-flex justify-content-between align-items-center";
+        li.innerHTML = `
+                    <span>${dia}</span>
+                    <span class="badge bg-primary rounded-pill">${Math.floor(Math.random() * 10 + 10)}°C</span>
+                `;
         lista.appendChild(li);
       });
     }
