@@ -1,8 +1,14 @@
-
-
-
-@mixin glass-effect($opacity: 0.8, $blur: 8px) {
-  background-color: rgba(255, 255, 255, $opacity);
+@mixin card-style($bg-color: rgba(255, 255, 255, 0.2), $blur: 5px) {
+  background-color: $bg-color;
   backdrop-filter: blur($blur);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }

@@ -1,3 +1,5 @@
+
+@use "../abstracts/variables" as *;
 body {
   background-image: url('../img/fondo-cielo.jpg');
   background-size: cover;
@@ -7,7 +9,7 @@ body {
 }
 
 main {
-  background-color: $bg-main; // Usamos la variable
+  background-color: $bg-main; 
   margin: 20px;
   padding: 20px;
   border-radius: 15px;

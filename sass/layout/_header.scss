@@ -1,0 +1,50 @@
+
+@use "../abstracts/variables" as *;
+
+
+.main-nav {
+    background-color: $nav-bg; 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0; 
+
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+    }
+
+    
+    &__back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2) ;
+        transform: translateX(-5px); 
+        color: #ffc107 ;
+        }
+
+        i {
+            font-size: 1.2rem;
+        }
+    }
+}
